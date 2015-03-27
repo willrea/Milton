@@ -2,6 +2,8 @@
 
 LPC1768-based platform for high altitude balloons.
 
+![Eagle](Hardware/images/milton_eagle.png)
+
 Includes:
 * ublox MAX7 GPS
 * Bosch BME280 Pressure/Humidity/Temperature Sensor
@@ -9,3 +11,5 @@ Includes:
 * Capability to trigger 2 Canon cameras loaded with CHDK
 * MMA8452Q Accelerometer
 * Supports a thermocouple for exterior temperature reading via a OneWire MAX31850
+
+Hardware is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
