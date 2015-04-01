@@ -414,15 +414,6 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <vertex x="1.8364" y="-0.0051" curve="-90.012967"/>
 </polygon>
 </package>
-<package name="SMA-EDGE">
-<description>&lt;b&gt;SMA Antenna Connector&lt;/b&gt;&lt;p&gt;
-This is a footprint for an edge mount RF antenna. Works pretty well with SMA type connectors but may also work with other edge mount RF connectors. Keep in mind, these edge mount connectors assume you are using a 0.062" PCB thickness.</description>
-<smd name="GND@0" x="0" y="0" dx="1.524" dy="4.064" layer="1" cream="no"/>
-<smd name="SIG" x="2.54" y="0" dx="1.524" dy="4.064" layer="1" cream="no"/>
-<smd name="GND@1" x="5.08" y="0" dx="1.524" dy="4.064" layer="1" cream="no"/>
-<smd name="GND@2" x="0" y="0" dx="1.524" dy="4.064" layer="16"/>
-<smd name="GND@3" x="5.08" y="0" dx="1.524" dy="4.064" layer="16"/>
-</package>
 </packages>
 <symbols>
 <symbol name="GND">
@@ -465,16 +456,6 @@ This is a footprint for an edge mount RF antenna. Works pretty well with SMA typ
 <pin name="SHIELD@1" x="-7.62" y="-10.16" length="middle"/>
 <pin name="SHIELD@2" x="-7.62" y="-12.7" length="middle"/>
 <pin name="SHIELD@4" x="-7.62" y="-17.78" length="middle"/>
-</symbol>
-<symbol name="SMA_EDGE">
-<wire x1="0" y1="-2.54" x2="0" y2="-12.7" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="1.1359" width="0.254" layer="94"/>
-<circle x="0" y="0" radius="2.54" width="0.254" layer="94"/>
-<pin name="GND@0" x="-2.54" y="-5.08" visible="off" length="short"/>
-<pin name="SIGNAL" x="5.08" y="0" visible="off" length="middle" rot="R180"/>
-<pin name="GND@1" x="-2.54" y="-7.62" visible="off" length="short"/>
-<pin name="GND@2" x="-2.54" y="-10.16" visible="off" length="short"/>
-<pin name="GND@3" x="-2.54" y="-12.7" visible="off" length="short"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -670,27 +651,6 @@ Push-push type uSD socket. Schematic element and footprint production proven. Sp
 <connect gate="G$1" pin="SHIELD@3" pad="GND1"/>
 <connect gate="G$1" pin="SHIELD@4" pad="CD2"/>
 <connect gate="G$1" pin="VCC" pad="4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="SMA_EDGE" prefix="J$">
-<description>&lt;b&gt;SMA Antenna Connector&lt;/b&gt;
-End launch SMA connector. The paste layer has been removed so that the connector can be hand soldered onto the board after reflow.</description>
-<gates>
-<gate name="1" symbol="SMA_EDGE" x="-2.54" y="7.62"/>
-</gates>
-<devices>
-<device name="" package="SMA-EDGE">
-<connects>
-<connect gate="1" pin="GND@0" pad="GND@0"/>
-<connect gate="1" pin="GND@1" pad="GND@1"/>
-<connect gate="1" pin="GND@2" pad="GND@2"/>
-<connect gate="1" pin="GND@3" pad="GND@3"/>
-<connect gate="1" pin="SIGNAL" pad="SIG"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -4606,6 +4566,15 @@ Epson Toyocom FCC-255</description>
 <wire x1="1.968" y1="-2.032" x2="1.468" y2="-2.032" width="0.127" layer="21"/>
 <text x="-3.81" y="2.54" size="1.27" layer="25">&gt;NAME</text>
 </package>
+<package name="SMA003.062">
+<smd name="RF" x="-0.42" y="0" dx="4.06" dy="1.52" layer="1" cream="no"/>
+<smd name="C2" x="-0.42" y="2.54" dx="4.06" dy="1.52" layer="1" cream="no"/>
+<smd name="C3" x="-0.42" y="-2.54" dx="4.06" dy="1.52" layer="1" cream="no"/>
+<smd name="C4" x="-0.42" y="2.54" dx="4.06" dy="1.52" layer="16" cream="no"/>
+<smd name="C5" x="-0.42" y="-2.54" dx="4.06" dy="1.52" layer="16" cream="no"/>
+<rectangle x1="2.03" y1="-3.965" x2="3.29" y2="3.965" layer="51"/>
+<rectangle x1="3.29" y1="-3.09371875" x2="9.64" y2="3.09371875" layer="51"/>
+</package>
 </packages>
 <symbols>
 <symbol name="BME280">
@@ -4724,6 +4693,19 @@ Epson Toyocom FCC-255</description>
 <pin name="RTS#" x="22.86" y="17.78" length="middle" rot="R180"/>
 <pin name="VCCIO" x="2.54" y="30.48" length="middle" rot="R270"/>
 <pin name="GND_PIN21" x="2.54" y="-30.48" length="middle" rot="R90"/>
+</symbol>
+<symbol name="SMA">
+<wire x1="-2.54" y1="2.54" x2="-2.54" y2="-2.54" width="0.254" layer="94" curve="-180" cap="flat"/>
+<wire x1="0" y1="-2.54" x2="-0.762" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-0.508" y2="0" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="0.254" x2="-0.762" y2="0.254" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="0.254" x2="-0.508" y2="0" width="0.254" layer="94"/>
+<wire x1="-0.508" y1="0" x2="-0.762" y2="-0.254" width="0.254" layer="94"/>
+<wire x1="-0.762" y1="-0.254" x2="-2.54" y2="-0.254" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96">&gt;VALUE</text>
+<text x="-2.54" y="3.302" size="1.778" layer="95">&gt;NAME</text>
+<pin name="1" x="2.54" y="0" visible="off" length="short" direction="pas" rot="R180"/>
+<pin name="2" x="2.54" y="-2.54" visible="off" length="short" direction="pas" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -4853,6 +4835,22 @@ Epson Toyocom FCC-255</description>
 <connect gate="G$1" pin="USBDP" pad="USBDP"/>
 <connect gate="G$1" pin="VCC" pad="VCC"/>
 <connect gate="G$1" pin="VCCIO" pad="VCCIO"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="SMA003.062" prefix="X">
+<gates>
+<gate name="A" symbol="SMA" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SMA003.062">
+<connects>
+<connect gate="A" pin="1" pad="RF"/>
+<connect gate="A" pin="2" pad="C2 C3 C4 C5"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -6429,7 +6427,6 @@ Source: http://www.jst.com .. eZH.pdf</description>
 <part name="R13" library="SparkFun-Resistors" deviceset="RESISTOR" device="0603" value="100k">
 <attribute name="MPN" value="MCT06030C1003FP500"/>
 </part>
-<part name="J$1" library="SparkFun" deviceset="SMA_EDGE" device=""/>
 <part name="GND67" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND14" library="SparkFun" deviceset="GND" device=""/>
 <part name="SUPPLY14" library="SparkFun-Aesthetics" deviceset="3.3V" device=""/>
@@ -6602,6 +6599,7 @@ Source: http://www.jst.com .. eZH.pdf</description>
 </part>
 <part name="GND36" library="SparkFun" deviceset="GND" device=""/>
 <part name="GND37" library="SparkFun" deviceset="GND" device=""/>
+<part name="X3" library="wrea" deviceset="SMA003.062" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -8030,8 +8028,7 @@ the corner nearest VREF</text>
 <instance part="R13" gate="G$1" x="205.74" y="-7.62">
 <attribute name="MPN" x="205.74" y="-7.62" size="1.27" layer="96" display="off"/>
 </instance>
-<instance part="J$1" gate="1" x="325.12" y="15.24" rot="R180"/>
-<instance part="GND67" gate="1" x="330.2" y="33.02" rot="R180"/>
+<instance part="GND67" gate="1" x="320.04" y="22.86" rot="R180"/>
 <instance part="GND14" gate="1" x="208.28" y="0"/>
 <instance part="SUPPLY14" gate="G$1" x="220.98" y="40.64" rot="R270"/>
 <instance part="C22" gate="G$1" x="167.64" y="-10.16" rot="R270">
@@ -8064,6 +8061,7 @@ the corner nearest VREF</text>
 </instance>
 <instance part="GND6" gate="1" x="111.76" y="-25.4"/>
 <instance part="SJ1" gate="G$1" x="175.26" y="-15.24"/>
+<instance part="X3" gate="A" x="322.58" y="15.24" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -8109,24 +8107,6 @@ the corner nearest VREF</text>
 <wire x1="246.38" y1="25.4" x2="246.38" y2="27.94" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="J$1" gate="1" pin="GND@0"/>
-<pinref part="GND67" gate="1" pin="GND"/>
-<wire x1="327.66" y1="20.32" x2="330.2" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="330.2" y1="20.32" x2="330.2" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="J$1" gate="1" pin="GND@3"/>
-<wire x1="330.2" y1="22.86" x2="330.2" y2="25.4" width="0.1524" layer="91"/>
-<wire x1="330.2" y1="25.4" x2="330.2" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="330.2" y1="27.94" x2="330.2" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="327.66" y1="27.94" x2="330.2" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="J$1" gate="1" pin="GND@2"/>
-<wire x1="327.66" y1="25.4" x2="330.2" y2="25.4" width="0.1524" layer="91"/>
-<pinref part="J$1" gate="1" pin="GND@1"/>
-<wire x1="327.66" y1="22.86" x2="330.2" y2="22.86" width="0.1524" layer="91"/>
-<junction x="330.2" y="22.86"/>
-<junction x="330.2" y="25.4"/>
-<junction x="330.2" y="27.94"/>
-</segment>
-<segment>
 <pinref part="U10" gate="G$1" pin="GND"/>
 <wire x1="205.74" y1="5.08" x2="208.28" y2="5.08" width="0.1524" layer="91"/>
 <wire x1="208.28" y1="5.08" x2="208.28" y2="2.54" width="0.1524" layer="91"/>
@@ -8153,6 +8133,11 @@ the corner nearest VREF</text>
 <segment>
 <pinref part="R12" gate="G$1" pin="1"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X3" gate="A" pin="2"/>
+<pinref part="GND67" gate="1" pin="GND"/>
+<wire x1="320.04" y1="17.78" x2="320.04" y2="20.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RF_SCK" class="0">
@@ -8359,8 +8344,8 @@ the corner nearest VREF</text>
 <net name="N$33" class="0">
 <segment>
 <pinref part="C34" gate="G$1" pin="1"/>
-<pinref part="J$1" gate="1" pin="SIGNAL"/>
 <wire x1="317.5" y1="15.24" x2="320.04" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="X3" gate="A" pin="1"/>
 </segment>
 </net>
 <net name="XTAL_EN" class="0">
