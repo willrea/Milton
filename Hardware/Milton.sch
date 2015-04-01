@@ -6601,6 +6601,7 @@ Source: http://www.jst.com .. eZH.pdf</description>
 <attribute name="MPN" value="CL10B104KO8NNNC"/>
 </part>
 <part name="GND36" library="SparkFun" deviceset="GND" device=""/>
+<part name="GND37" library="SparkFun" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -6719,6 +6720,7 @@ the corner nearest VREF</text>
 <instance part="U$1" gate="G$1" x="27.94" y="101.6">
 <attribute name="MPN" x="27.94" y="101.6" size="1.27" layer="96" display="off"/>
 </instance>
+<instance part="GND37" gate="1" x="317.5" y="175.26"/>
 </instances>
 <busses>
 </busses>
@@ -6879,6 +6881,20 @@ the corner nearest VREF</text>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
 <pinref part="GND9" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="U$3" gate="G$1" pin="10_GND"/>
+<wire x1="325.12" y1="190.5" x2="322.58" y2="190.5" width="0.1524" layer="91"/>
+<wire x1="322.58" y1="190.5" x2="322.58" y2="180.34" width="0.1524" layer="91"/>
+<pinref part="U$3" gate="G$1" pin="12_GND"/>
+<wire x1="322.58" y1="180.34" x2="325.12" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="317.5" y1="177.8" x2="317.5" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="317.5" y1="180.34" x2="322.58" y2="180.34" width="0.1524" layer="91"/>
+<junction x="322.58" y="180.34"/>
+<pinref part="GND37" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="295.91" y1="177.8" x2="293.37" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="3.3V" class="5">

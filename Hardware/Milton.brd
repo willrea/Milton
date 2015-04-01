@@ -3043,6 +3043,8 @@ Please make sure your boards conform to these design rules.</description>
 <via x="24.902" y="13.87" extent="1-16" drill="0.4064" diameter="0.254"/>
 <via x="21.887" y="23.7864" extent="1-16" drill="0.4064"/>
 <via x="20.387" y="24.6864" extent="1-16" drill="0.4064"/>
+<contactref element="U$3" pad="10_GND"/>
+<contactref element="U$3" pad="12_GND"/>
 </signal>
 <signal name="3.3V" class="5">
 <contactref element="U3" pad="4"/>
@@ -3849,12 +3851,6 @@ Please make sure your boards conform to these design rules.</description>
 <contactref element="SJ1" pad="2"/>
 <wire x1="12.787" y1="36.915" x2="12.787" y2="35.43" width="0.1524" layer="1"/>
 <wire x1="12.787" y1="35.43" x2="13.497" y2="34.72" width="0.1524" layer="1"/>
-</signal>
-<signal name="10_GND">
-<contactref element="U$3" pad="10_GND"/>
-</signal>
-<signal name="12_GND">
-<contactref element="U$3" pad="12_GND"/>
 </signal>
 <signal name="N$6">
 <contactref element="C22" pad="1"/>
